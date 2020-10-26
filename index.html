@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cude Transition Page page</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src='./js/jquery.min.js'></script>
+</head>
+<body>
+    <div id="cubeTransition">
+        <div class="page1">
+            <h1 style="font-size: 32px;">Hii This Is mee Ashfaque Ali</h1>
+        </div>
+        <div class="page2"></div>
+        <div class="page3"></div>
+        <div class="page4"></div>
+        <div class="page5"></div>
+    </div>
+    <ul id="bullets"> </ul>
+
+    <script>
+        function animationIn(i){
+            console.log(i, 'i\'m in');
+            switch(i)
+            {
+                case 1:
+                    $('.page2').fadeIn();
+                    break;
+                case 2:
+                    $('.page3').animate({top: '40%', left:'30%'},1000);
+                    break;
+                case 3:
+                    setTimeout(function (){
+                        $('.page4').addClass('ani')
+                    },0);
+                    break;
+                default:
+                    ;
+            }
+        }
+
+        function animationOut(i){
+            console.log(i, 'i\'m out');
+            switch(i)
+            {
+                case 1:
+                    $('.page2').fadeOut();
+                    break;
+                case 2:
+                    $('.page3').animate({top: 0, left:0},1000);
+                    break;
+                case 3:
+                    setTimeout(function (){
+                        $('.page4').removeClass('ani')
+                    },0);
+                    break;
+                default:
+                    ;
+            }
+        }
+        function animationOut(i){}
+        function animationIn(i){}
+    
+    </script>
+    <script src="./js/wheel-indicator.js"></script>
+    <script src="./js/jquery.touchSwipe.js"></script>
+    <script src="./js/cubeTransition.js"></script>
+</body>
+</html>
